@@ -1,0 +1,35 @@
+#app {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+main{
+    max-width: 500px;
+    margin: 3rem 0 3rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+main button:first-child {
+    background-color: #583d72;
+}
+
+main button:last-child {
+    background-color: #ffc2b4;
+}
+
+main button {
+    border: none;
+    padding: 0 3rem;
+    border-radius: .3rem;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+main p {
+    font-size: 32px;
+    font-weight: bolder;
+}
