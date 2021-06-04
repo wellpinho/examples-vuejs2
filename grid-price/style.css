@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --color-light-gray:   #869ead;
+    --color-black-green:  #4ca1a3;
+    --color-light-green:  #a5e1ad;
+    --color-white:        #fff;
+}
+
+#app {
+    max-width: 94%;
+    margin: 2% auto;
+}
+
+header > h1 {
+    color: var(--color-black-green);
+    font-size: 60px;
+    margin: 2rem 0 1rem 0;
+}
+
+header > h2 {
+    color: var(--color-light-green);
+    font-style: italic;
+    font-size: 28px;
+    margin-bottom: 1rem;
+}
+
+header > p {
+    color: var(--color-light-gray);
+    font-size: 18px;
+}
+
+main {
+    margin-top: 1rem;
+
+    display: flex;
+    justify-content: center;
+}
+
+.left-box, .right-box {
+    padding: 2rem;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.left-box h2, .right-box h2 {
+    color: var(--color-white);
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+}
+
+.left-box p, .right-box p {
+    color: var(--color-white);
+    opacity: .8;
+}
+
+.left-box {
+    background-color: var(--color-black-green);
+}
+
+.spans {
+    margin-bottom: 1rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.spans span:first-child{
+    font-size: 36px;
+    color: var(--color-white);
+    font-weight: bold;
+    margin: 0 .5rem 0 0;
+}
+
+.spans span:last-child {
+    color: var(--color-white);
+    opacity: .5;
+}
+
+.right-box {
+    background-color: var(--color-light-green);
+}
+
+.left-box button {
+    width: 100%;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    background-color: var(--color-light-green);
+    color: var(--color-white);
+    border: none;
+    border-radius: .3rem;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+@media (max-width: 425px) {
+    header h1 {
+        font-size: 32px;
+    }
+    header h2 {
+        font-size: 18
+        px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+}
