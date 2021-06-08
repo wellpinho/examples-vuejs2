@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="count">Somar</button>
+        <button @click="reset">Reset</button>
+        <p>{{ contador }}</p>
+        <p>{{ 1 + 50 - 88 * 3 / 2 }}</p>
+        <p>{{ contador > 10 ? 'Maior que dez' : 'Menor que dez'}}</p>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                contador: 0
+            },
+
+            methods: {
+                count() {
+                    return this.contador += 1
+                },
+                reset() {
+                    return this.contador = 0
+                }
+            }
+        })
+    </script>
+</body>
+</html>

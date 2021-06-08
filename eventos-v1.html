@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS</title>
+    <link rel="stylesheet" href="./global.css">
+</head>
+<body>
+    <div id="app">
+        <h1>{{ title }}</h1>
+        <p>{{ category }}</p>
+
+        <div class="box">
+            <button v-on:click="count">Somar 1</button>
+            <p >{{ contador}}</p>
+            <button v-on:click="resetCount">Resetar</button>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                title: 'Curso Vue',
+                category: 'Escutando eventos com VueJS',
+                contador: 0
+            },
+            methods: {
+                count() {
+                    return this.contador++
+                },
+                resetCount() {
+                    return this.contador = 0
+                }
+            }
+        })
+    </script>
+</body>
+</html>
