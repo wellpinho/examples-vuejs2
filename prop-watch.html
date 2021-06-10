@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ title }}</h1>
+        <h2>{{ subTitle }}</h2>
+        <strong>Computed: {{ computado }}</strong>
+        <br>
+        <button v-on:click="soma">Iniciar linha do tempo:</button> <br>
+        <h1> Segundos: {{  contador }} Minutos: {{  minute }} Horas: {{  hour }}</h1>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                title: 'Curso VueJS',
+                subTitle: 'Propriedade Watch',
+                contador: 0,
+                minute: 0,
+                hour: 0
+            },
+            computed: {
+                // são sincronas sempre ao camar deve retornar um valor
+                computado() {
+                    return 5 + 5
+                }
+            },
+            watch: {
+                // monitora alterações de uma propriedade
+                /*
+                    Exemplo do uso do watch
+                    combo box de estado para popular outro combo box com cidades
+                */
+                contador(novo, antigo) {
+                    setTimeout(() => {
+                        this.contador++
+                        if (this.contador === 10) {
+                            this.contador = 0
+                            this.minute++
+                            if (this.minute === 10) {
+                                this.hour++
+                            }
+                        }
+                    }, 1000)
+                }
+            }, 
+            methods: {
+                soma() {
+                    return this.contador++
+                }
+            }
+        })
+    </script>
+</body>
+</html>

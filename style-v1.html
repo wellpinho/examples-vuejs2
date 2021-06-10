@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #app {
+            width: 500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        .demo {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+        }
+        .c1 { background-color: green;  }
+        .c2 { background-color: indigo; }
+        .c3{ background-color: tan; }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div @click="c1 = !c1" :class="{c1}" class="demo"></div>
+        <div @click="c2 = !c2" :class="{c2}" class="demo"></div>
+        <div @click="c3 = !c3" :class="{c3}" class="demo"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                c1: false,
+                c2: false,
+                c3: false,
+            }
+        })
+    </script>
+</body>
+</html>
